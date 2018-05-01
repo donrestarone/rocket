@@ -8,11 +8,18 @@ class RocketTest < Minitest::Test
   	@random_rocket = Rocket.new(flying: true)
   end 
 
-  def test_name_reader
-  	expected_value = "Powerful North Korean Rocket"
-  	actual_value = @rocket.name 
-  	assert_equal(expected_value, actual_value)
+  def test_initialize_assigns_random_name_if_none_given
+  	# expected_value = "Powerful North Korean Rocket"
+  	# actual_value = @rocket.name 
+  	# assert_equal(expected_value, actual_value)
+
+  	
+  	actual_value = @random_rocket.name 
+  	refute_nil(actual_value)
+
   end 
+
+
 
   def test_name_writer
   	expected_value = "Broken North Korean Rocket"
