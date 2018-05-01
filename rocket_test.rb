@@ -76,4 +76,11 @@ class RocketTest < Minitest::Test
   	assert_equal(expected_value, actual_value)
   end 
 
+  def test_random_colour 
+  	expected_value = @random_rocket.colour
+  	actual_value = @random_rocket.colour
+  	assert_equal(expected_value, actual_value)
+
+  end 
+
 end
