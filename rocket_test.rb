@@ -3,7 +3,7 @@ require_relative "rocket"
 
 class RocketTest < Minitest::Test
   def setup
-  	@rocket = Rocket.new(name: "Powerful North Korean Rocket", colour: "red", flying: false)
+  	@rocket = Rocket.new(name: "Powerful North Korean Rocket", colour: "red", flying: true)
   	@random_rocket = Rocket.new
   end 
 
@@ -32,10 +32,25 @@ class RocketTest < Minitest::Test
   end 
 
   def test_flying
-  	expected_value = false
+  	skip
+  	expected_value = true
   	actual_value = @rocket.flying?
   	assert_equal(expected_value, actual_value)
   end 
 
-  
+  def test_lift_off
+  	skip
+  	expected_value = false 
+  	actual_value = @rocket.lift_off
+  	assert_equal(expected_value, actual_value)
+  end 
+
+  def test_land 
+  	skip
+  	expected_value = true
+  	actual_value = @rocket.land
+  	assert_equal(expected_value, actual_value)
+  end 
+
+
 end
